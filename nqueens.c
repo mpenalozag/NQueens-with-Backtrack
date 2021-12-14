@@ -15,10 +15,10 @@
     Para este problema vamos a representar a cada reina en el tablero con el número 1.
 */
 
-int main()
+int main(int argc, char* argv[])
 {
     // Definimos el n con el que trabajaremos.
-    int n = 7;
+    int n = strtol(argv[1], NULL, 10);
 
     // Definimos la cantidad de reinas que ya hemos posicionado. Inicialemente es cero.
     int* placed_queens = calloc(1, sizeof(int));
