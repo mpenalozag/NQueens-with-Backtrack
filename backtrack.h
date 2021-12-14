@@ -1,0 +1,1 @@
+bool solve_NQueens(int N, int** board, int* placed_queens);
