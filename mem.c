@@ -41,7 +41,7 @@ void print_board(int** board, int n)
             }
             else
             {
-                printf("   |", board[i][j]);
+                printf("   |");
             }
         }
         printf("\n");

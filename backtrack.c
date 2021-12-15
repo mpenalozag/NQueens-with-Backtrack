@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <unistd.h>
+
 #include "mem.h"
 
 /*
@@ -112,6 +114,10 @@ bool solve_NQueens(int N, int** board, int* placed_queens)
             // Realizamos asignación de posición de la reina.
             board[row][*placed_queens] = 1;
             *placed_queens += 1;
+            //printf("Realizamos asignación.\n");
+            //print_board(board, N);
+            //usleep(1000 * 500);
+            //system("clear");
             // Intentamos resolver el problema con esta asignación.
             if (solve_NQueens(N, board, placed_queens))
             {
@@ -119,6 +125,10 @@ bool solve_NQueens(int N, int** board, int* placed_queens)
             }
             *placed_queens -= 1;
             board[row][*placed_queens] = 0;
+            //printf("Deshacemos asignación.\n");
+            //print_board(board, N);
+            //usleep(1000 * 500);
+            //system("clear");
         }
     }
     return false;
